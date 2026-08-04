@@ -5,14 +5,14 @@ export const profile = {
   initials: "Hello",
   school: "南京邮电大学",
   focus: "软件开发",
-  email: "yourname@example.com",
+  email: "18551047683@163.com",
   githubUrl: "https://github.com/MeowuzZ",
   githubUsername: "MeowuzZ",
   autoSyncGitHub: true,
   hiddenRepositories: ["MeowuzZ.github.io"],
   availability: "OPEN TO WORK",
   intro:
-    "不要掉头发T-T",
+    "不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T",
 };
 
 export const stats = [
