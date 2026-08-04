@@ -332,13 +332,48 @@ footer a:hover {
   line-height: 1.9;
 }
 
+.github-sync-status {
+  margin: -28px 0 28px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.github-sync-status span {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.github-sync-status i {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #4caf50;
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.14);
+}
+
+.github-sync-status strong {
+  color: var(--ink);
+}
+
 .project-grid {
   column-count: 3;
   column-gap: 24px;
 }
 
 .project-card,
-.add-project-card {
+.add-project-card,
+.github-message-card {
   width: 100%;
   margin: 0 0 24px;
   display: inline-block;
@@ -346,6 +381,57 @@ footer a:hover {
   overflow: hidden;
   background: #fffdf7;
   border: 1px solid var(--ink);
+}
+
+.github-message-card {
+  min-height: 220px;
+  padding: 28px;
+  background: var(--paper-deep);
+  color: var(--muted);
+}
+
+.github-message-card strong {
+  display: block;
+  margin-top: 22px;
+  color: var(--ink);
+  font-size: 20px;
+}
+
+.github-message-card p {
+  margin: 14px 0 0;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.github-message-error {
+  border-style: dashed;
+}
+
+.sync-loader,
+.sync-check {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+}
+
+.sync-loader {
+  border-right-color: transparent;
+  animation: sync-spin 800ms linear infinite;
+}
+
+.sync-check {
+  background: var(--acid);
+  color: var(--ink);
+  font-weight: 900;
+}
+
+@keyframes sync-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .project-card {
@@ -457,6 +543,16 @@ footer a:hover {
 
 .project-highlights li + li {
   margin-top: 5px;
+}
+
+.repo-metrics {
+  margin: -4px 0 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--muted);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 9px;
 }
 
 .tech-list {

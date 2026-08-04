@@ -1,15 +1,18 @@
 // 这是主页最常改的文件：个人信息、统计数字和项目卡片都集中在这里。
 export const profile = {
   siteName: "DEVFOLIO_2026",
-  name: "[ 你的名字 ]",
-  initials: "YN",
-  school: "[ 你的学校 ]",
-  focus: "软件开发 · 教培方向",
+  name: " Meowu ",
+  initials: "Hello",
+  school: "南京邮电大学",
+  focus: "软件开发",
   email: "yourname@example.com",
-  githubUrl: "https://github.com/your-github-name",
-  availability: "即将毕业 · OPEN TO WORK",
+  githubUrl: "https://github.com/MeowuzZ",
+  githubUsername: "MeowuzZ",
+  autoSyncGitHub: true,
+  hiddenRepositories: ["MeowuzZ.github.io"],
+  availability: "OPEN TO WORK",
   intro:
-    "软件工程专业应届生，也是一名准备走进软件教培行业的实践者。我相信：真正掌握一项技术，是既能把它做出来，也能把它讲明白。",
+    "不要掉头发T-T",
 };
 
 export const stats = [
