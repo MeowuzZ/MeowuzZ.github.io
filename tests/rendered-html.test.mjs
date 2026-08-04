@@ -32,6 +32,6 @@ test("server-renders the finished portfolio", async () => {
   assert.match(html, /AI 智能面试官/);
   assert.match(html, /课程管理工作台/);
   assert.match(html, /下一个项目/);
-  assert.match(html, /GITHUB AUTO SYNC/);
+  assert.doesNotMatch(html, /GITHUB AUTO SYNC|正在读取 .* 的公开仓库|GitHub 已连接/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/);
 });

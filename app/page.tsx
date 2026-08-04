@@ -1,13 +1,10 @@
 import { profile, projects, stats } from "./portfolio-data";
-import GitHubProjects from "./GitHubProjects";
 
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
 export default function Home() {
-  const manualRepoUrls = projects.map((project) => project.repoUrl);
-
   return (
     <main>
       <header className="site-header">
@@ -87,17 +84,10 @@ export default function Home() {
             <h2>把学习结果，<br />做成看得见的作品。</h2>
           </div>
           <p>
-            精选项目保留自定义截图与 AI 摘要；其余公开仓库由 GitHub
-            自动发现，新仓库无需改动页面即可生成卡片。
+            每个项目都由我手动整理截图、README 摘要与技术栈，
+            让作品呈现保持准确、完整，也更能体现实践过程。
           </p>
         </div>
-
-        {profile.autoSyncGitHub && (
-          <div className="github-sync-status" aria-label="GitHub 自动同步已开启">
-            <span><i /> GITHUB AUTO SYNC</span>
-            <strong>@{profile.githubUsername}</strong>
-          </div>
-        )}
 
         <div className="project-grid">
           {projects.map((project, index) => (
@@ -142,23 +132,19 @@ export default function Home() {
             </article>
           ))}
 
-          {profile.autoSyncGitHub && (
-            <GitHubProjects
-              username={profile.githubUsername}
-              hiddenRepositories={profile.hiddenRepositories}
-              manualRepoUrls={manualRepoUrls}
-            />
-          )}
-
           <article className="add-project-card" id="project-guide">
             <span className="add-icon" aria-hidden="true">＋</span>
             <p className="eyebrow">YOUR NEXT BUILD</p>
             <h3>下一个项目，<br />从这里加入。</h3>
             <p>
-              新建公开仓库后会自动生成卡片；如需自定义截图和 AI 摘要，再把它加入精选项目配置。
+              完成新项目后，复制一份项目配置，替换截图、摘要、技术栈和仓库链接即可加入主页。
             </p>
-            <a href={profile.githubUrl} target="_blank" rel="noreferrer">
-              前往 GitHub <Arrow />
+            <a
+              href={`${profile.githubUrl}/MeowuzZ.github.io#新增或修改项目`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              查看添加说明 <Arrow />
             </a>
           </article>
         </div>

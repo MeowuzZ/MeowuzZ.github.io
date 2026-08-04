@@ -7,9 +7,6 @@ export const profile = {
   focus: "软件开发",
   email: "18551047683@163.com",
   githubUrl: "https://github.com/MeowuzZ",
-  githubUsername: "MeowuzZ",
-  autoSyncGitHub: true,
-  hiddenRepositories: ["MeowuzZ.github.io"],
   availability: "OPEN TO WORK",
   intro:
     "不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T",
