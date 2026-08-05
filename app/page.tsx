@@ -129,7 +129,7 @@ export default function Home() {
                 </div>
               </div>
             </article>
-          ))} 
+          ))}
         </div>
       </section>
 

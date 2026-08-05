@@ -28,10 +28,10 @@ test("server-renders the finished portfolio", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /软件人的实践作品集/);
+  assert.match(html, /Meowu · 主页空间/);
   assert.match(html, /AI 智能面试官/);
   assert.match(html, /课程管理工作台/);
-  assert.match(html, /下一个项目/);
+  assert.doesNotMatch(html, /YOUR NEXT BUILD|下一个项目|查看添加说明/);
   assert.doesNotMatch(html, /GITHUB AUTO SYNC|正在读取 .* 的公开仓库|GitHub 已连接/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/);
 });

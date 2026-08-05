@@ -80,7 +80,6 @@ nav {
 nav a,
 .text-link,
 .project-links a,
-.add-project-card a,
 footer a {
   border-bottom: 1px solid transparent;
   transition: border-color 160ms ease, color 160ms ease;
@@ -89,7 +88,6 @@ footer a {
 nav a:hover,
 .text-link:hover,
 .project-links a:hover,
-.add-project-card a:hover,
 footer a:hover {
   color: var(--orange);
   border-color: currentColor;
@@ -337,8 +335,7 @@ footer a:hover {
   column-gap: 24px;
 }
 
-.project-card,
-.add-project-card {
+.project-card {
   width: 100%;
   margin: 0 0 24px;
   display: inline-block;
@@ -423,8 +420,7 @@ footer a:hover {
   gap: 16px;
 }
 
-.project-title-row h3,
-.add-project-card h3 {
+.project-title-row h3 {
   margin: 0;
   font-size: 25px;
   line-height: 1.25;
@@ -480,34 +476,6 @@ footer a:hover {
   gap: 18px;
   border-top: 1px solid var(--line);
   font-size: 11px;
-  font-weight: 800;
-}
-
-.add-project-card {
-  min-height: 370px;
-  padding: 32px;
-  background: var(--acid);
-}
-
-.add-icon {
-  width: 54px;
-  height: 54px;
-  margin-bottom: 64px;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--ink);
-  border-radius: 50%;
-  font-size: 26px;
-}
-
-.add-project-card > p:not(.eyebrow) {
-  margin: 20px 0 30px;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.add-project-card a {
-  font-size: 12px;
   font-weight: 800;
 }
 
