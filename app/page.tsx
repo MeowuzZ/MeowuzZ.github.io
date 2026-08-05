@@ -80,12 +80,11 @@ export default function Home() {
       <section className="projects-section" id="projects">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">SELECTED WORK / 精选实践</p>
+            <p className="eyebrow">SELECTED WORK </p>
             <h2>把学习结果，<br />做成看得见的作品。</h2>
           </div>
           <p>
-            每个项目都由我手动整理截图、README 摘要与技术栈，
-            让作品呈现保持准确、完整，也更能体现实践过程。
+            动手实现自己的每一个奇思妙想～
           </p>
         </div>
 
@@ -130,23 +129,7 @@ export default function Home() {
                 </div>
               </div>
             </article>
-          ))}
-
-          <article className="add-project-card" id="project-guide">
-            <span className="add-icon" aria-hidden="true">＋</span>
-            <p className="eyebrow">YOUR NEXT BUILD</p>
-            <h3>下一个项目，<br />从这里加入。</h3>
-            <p>
-              完成新项目后，复制一份项目配置，替换截图、摘要、技术栈和仓库链接即可加入主页。
-            </p>
-            <a
-              href={`${profile.githubUrl}/MeowuzZ.github.io#新增或修改项目`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              查看添加说明 <Arrow />
-            </a>
-          </article>
+          ))} 
         </div>
       </section>
 
