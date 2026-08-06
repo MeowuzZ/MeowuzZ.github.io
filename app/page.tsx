@@ -29,11 +29,16 @@ export default function Home() {
           </h1>
           <p className="hero-intro">{profile.intro}</p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#projects">
-              查看我的项目 <Arrow />
-            </a>
-            <a className="text-link" href={profile.githubUrl} target="_blank" rel="noreferrer">
-              GitHub 主页 <Arrow />
+            <div className="split-button" aria-label="项目与 GitHub">
+              <a href="#projects">
+                查看我的项目
+              </a>
+              <a href={profile.githubUrl} target="_blank" rel="noreferrer">
+                GitHub 主页 <Arrow />
+              </a>
+            </div>
+            <a className="button contact-hero-button" href={`mailto:${profile.email}`}>
+              联系我 <Arrow />
             </a>
           </div>
         </div>
@@ -131,17 +136,6 @@ export default function Home() {
             </article>
           ))}
         </div>
-      </section>
-
-      <section className="contact-section" id="contact">
-        <div>
-          <p className="eyebrow">LET&apos;S BUILD SOMETHING USEFUL</p>
-          <h2>愿意聊聊教学、代码，<br />以及如何把知识讲明白。</h2>
-        </div>
-        <a className="contact-button" href={`mailto:${profile.email}`}>
-          <span>写封邮件给我</span>
-          <strong><Arrow /></strong>
-        </a>
       </section>
 
       <footer>

@@ -149,9 +149,43 @@ footer a:hover {
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 18px;
   font-size: 14px;
   font-weight: 700;
+}
+
+.split-button {
+  min-height: 54px;
+  display: inline-flex;
+  align-items: stretch;
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--orange);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.split-button a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 22px;
+  color: white;
+}
+
+.split-button a + a {
+  border-left: 1px solid rgba(255, 255, 255, 0.32);
+}
+
+.split-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 var(--orange);
+}
+
+.split-button a:focus-visible,
+.button:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
 }
 
 .button {
@@ -165,15 +199,15 @@ footer a:hover {
   transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
-.button-primary {
-  background: var(--ink);
-  color: white;
-  box-shadow: 6px 6px 0 var(--orange);
+.contact-hero-button {
+  background: var(--acid);
+  color: var(--ink);
+  box-shadow: 6px 6px 0 var(--blue);
 }
 
 .button:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 8px 8px 0 var(--orange);
+  box-shadow: 8px 8px 0 var(--blue);
 }
 
 .profile-panel {
@@ -314,8 +348,7 @@ footer a:hover {
   gap: 9vw;
 }
 
-.section-heading h2,
-.contact-section h2 {
+.section-heading h2 {
   margin: 0;
   font-size: clamp(40px, 5.6vw, 76px);
   line-height: 1.08;
@@ -356,7 +389,6 @@ footer a:hover {
 
 .project-image-wrap {
   position: relative;
-  aspect-ratio: 16 / 10;
   overflow: hidden;
   background: #dad7cd;
   border-bottom: 1px solid var(--ink);
@@ -364,16 +396,8 @@ footer a:hover {
 
 .project-image-wrap img {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
-  object-fit: cover;
-  filter: saturate(0.88);
-  transition: transform 420ms cubic-bezier(.2,.8,.2,1), filter 180ms ease;
-}
-
-.project-card:hover img {
-  transform: scale(1.025);
-  filter: saturate(1);
 }
 
 .project-number,
@@ -479,58 +503,6 @@ footer a:hover {
   font-weight: 800;
 }
 
-.contact-section {
-  padding: 86px 8%;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: end;
-  gap: 40px;
-  background: var(--blue);
-  color: white;
-}
-
-.contact-section .eyebrow {
-  color: rgba(255, 255, 255, 0.65);
-}
-
-.contact-section h2 {
-  max-width: 850px;
-  font-size: clamp(38px, 5vw, 68px);
-}
-
-.contact-button {
-  width: 220px;
-  min-height: 64px;
-  padding-left: 22px;
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  background: white;
-  color: var(--ink);
-  font-size: 13px;
-  font-weight: 800;
-  transition: transform 160ms ease, box-shadow 160ms ease;
-}
-
-.contact-button span {
-  display: flex;
-  align-items: center;
-}
-
-.contact-button strong {
-  width: 62px;
-  display: grid;
-  place-items: center;
-  background: var(--acid);
-  border-left: 1px solid var(--ink);
-  font-size: 20px;
-}
-
-.contact-button:hover {
-  transform: translate(-4px, -4px);
-  box-shadow: 8px 8px 0 var(--ink);
-}
-
 footer {
   min-height: 108px;
   display: flex;
@@ -575,9 +547,6 @@ footer {
     max-width: 580px;
   }
 
-  .contact-section {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 700px) {
@@ -611,9 +580,25 @@ footer {
   }
 
   .hero-actions {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 22px;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .split-button {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .split-button a {
+    flex: 1;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .contact-hero-button {
+    flex-shrink: 0;
+    gap: 10px;
+    padding: 0 16px;
   }
 
   .profile-panel {
@@ -644,10 +629,6 @@ footer {
   .project-card:hover {
     transform: none;
     box-shadow: none;
-  }
-
-  .contact-section {
-    padding: 62px 24px;
   }
 
   footer {
