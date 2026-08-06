@@ -39,7 +39,7 @@ export const projects: Project[] = [
     year: "2026",
     kind: "ANDROID APPLICATION",
     accent: "orange",
-    thumbnail: "/projects/ai-interview.png",
+    thumbnail: "/projects/personal-ai-os.jpg",
     summary:
       "一款面向个人日常使用的离线优先 Android 应用，将任务与日程、日记、长期目标、个人信息、AI 助手和每日复盘整合到统一的本地数据系统中。",
     highlights: ["支持日程、跨日期待办及紧急重要四象限管理", "提供日记月历、长期目标进度和每日复盘功能","数据保存在本地，支持JSON导出与操作撤销","通过GitHub Actions自动构建、签名并发布APK"],
