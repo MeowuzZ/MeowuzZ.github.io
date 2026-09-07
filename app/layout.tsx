@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://meowuzz.github.io"),
   title: "Meowu · 主页空间",
-  description: "大学三年积攒的实践项目经历",
+  description: "软件工程学生与教培从业者的实践项目经历",
   alternates: {
     canonical: "/",
   },

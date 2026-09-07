@@ -1,15 +1,15 @@
 // 这是主页最常改的文件：个人信息、统计数字和项目卡片都集中在这里。
 export const profile = {
-  siteName: "DEVFOLIO_2026",
-  name: " Meowu ",
-  initials: "Hello",
+  siteName: "MEOWU_2026",
+  name: "Meowu",
+  initials: "MW",
   school: "南京邮电大学",
-  focus: "软件开发",
+  focus: "Android 开发",
   email: "18551047683@163.com",
   githubUrl: "https://github.com/MeowuzZ",
-  availability: "OPEN TO WORK",
+  availability: "实习 / 校招",
   intro:
-    "不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T不要掉头发T-T",
+    "南京邮电大学软件工程学生，同时也是软件教培从业者。偏爱把脑海里的点子亲手做成能跑起来的作品，专注 Android 开发与移动端实践。这里记录我的项目与成长轨迹，欢迎交流。",
 };
 
 export const stats = [
